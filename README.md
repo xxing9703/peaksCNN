@@ -1,12 +1,12 @@
 # peaksCNN
 This Matlab code follows the idea from the paper (in citaion) with some modifications, for training and using deep learning CNN (convolutional neural network) model to classify LC-MS features as true (high quality) and false (low quality).
 
-## use pretrained model for peak classification (use function peaksEVA.m)
-example usage: type the following code in matlab
+## Use pretrained model for peak classification (use function peaksEVA.m)
+Example usage: type the following one-line code in matlab
 
-peaksEVA('example_pos.mzXML','example_peaks_pos.csv',[5,6],'net64')
+    peaksEVA('example_pos.mzXML','example_peaks_pos.csv',[5,6],'net64')
 
-required inputs:
+Required inputs:
 1) input .mzXML file
 2) input peaklist file generated from peakpicking (XCMS,mzMINE,ElMaven)
 3) specify column numbers for m/z and rt in the peaklist file.
