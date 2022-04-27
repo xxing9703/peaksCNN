@@ -1,15 +1,20 @@
-digitDatasetPath = 'C:\Users\xxing\Documents\Github\NetID\pilot\25095EICs';
+% this script train a cnn model for peak classification using the training
+% image data in subfolder '25095EICs', which can be downloaded from
+% https://pubs.acs.org/doi/suppl/10.1021/acs.analchem.1c01309/suppl_file/ac1c01309_si_001.zip
+digitDatasetPath = '25095EICs';
+digitDatasetPath = 'C:\Users\xxing\Documents\Github\Deep learning\25095EICs'
+size=64;  % origian images will be compressed to sizeXsize, also need to change the dim value in customReadDatastoreImage.m
 imds = imageDatastore(digitDatasetPath, ...
     'IncludeSubfolders',true,'LabelSource','foldernames');
 
 imds.ReadFcn = @customReadDatastoreImage;
-size=64;
-figure;
-perm = randperm(25095,20);
-for i = 1:4
-    subplot(2,2,i);
-    imshow(imds.Files{perm(i)});
-end
+
+% figure;
+% perm = randperm(25095,20);
+% for i = 1:4
+%     subplot(2,2,i);
+%     imshow(imds.Files{perm(i)});
+% end
 
 labelCount = countEachLabel(imds);
 numModelFiles = 0.8;
@@ -18,7 +23,7 @@ numTrainFiles = 0.7;
 [imdsTrain,imdsValidation] = splitEachLabel(imdsModel,numTrainFiles,'randomize');
 
 
-%%
+%%  CNN model architecture
 layers = [
     imageInputLayer([size size 1])
     
@@ -53,4 +58,5 @@ net = trainNetwork(imdsTrain,layers,options);
 YPred = classify(net,imdsValidation);
 YValidation = imdsValidation.Labels;
 
+% show training accuracy
 accuracy = sum(YPred == YValidation)/numel(YValidation)
