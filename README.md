@@ -14,14 +14,18 @@ Required inputs:
 Two pretrained models included in this repo:  "net64.mat" and "net48.mat". (difference: image compression to 64X64 or 48X48)
 
 Output:
-A subfolder with a time stamp will be generated, containing a "true" and a "false" folder. EICs of all the peaks will be plotted and classified into these two subfolders
-a copy of the peaklist file will be created under the same folder, a new column "ispeak" will be added to the peaklist. 
+ 1) A subfolder with a time stamp will be generated, containing a "true" and a "false" folder. 
+ 2) EICs of all the peaks will be plotted and classified into these two subfolders.
+ 3) A copy of the peaklist file will be created under the same folder, a new column "ispeak" will be added to the peaklist.
 
-
-## train your own model. (use script peaksCNN )
+## Train your own model. (use script peaksCNN )
 1) download the training set from link below
 https://pubs.acs.org/doi/suppl/10.1021/acs.analchem.1c01309/suppl_file/ac1c01309_si_001.zip
-2) Do some modifications as instructed and run peaksCNN.m
+2) Do some modifications (optional, see below) and run peaksCNN.m.
+<br /> a) modify the training data set as desired, or add new images to the training data set, which could come from the classification results from your own data
+<br /> b) change the architecture of the CNN models by adding/removing layers 
+<br /> c) change the splits of training & validation sets
+<br /> d) change the training options
 
 ## Citation 
 Anal. Chem. 2021, 93, 36, 12181–12186 "EVA: Evaluation of Metabolic Feature Fidelity Using a Deep Learning Model Trained With Over 25000 Extracted Ion Chromatograms"
