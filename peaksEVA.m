@@ -15,7 +15,7 @@
 % -- updated peaklist, with an added column of 'ispeak'.
 
 % example usage:
-% peaksEVA('pos-mix-01.mzXML','peaks_pos_scan2.csv',[5,6],'net64')
+% peaksEVA('example_pos.mzXML','example_peaks_pos.csv',[5,6],'net64')
 
 function [ispeak,img]=peaksEVA(fn_mzXML,fn_pklist,cols,model,ppm,ave) 
 ispeak=[];img=[];
