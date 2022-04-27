@@ -4,7 +4,7 @@ This Matlab code follows the idea from the paper (in citaion) with some modifica
 ## Use pretrained model for peak classification (use function "peaksEVA.m" or a GUI app "peakfilter.mlapp")
 Example usage: type the following one-line code in matlab
 
-    peaksEVA('example_pos.mzXML','example_peaks_pos.csv',[5,6],'net64')
+    peaksEVA('example_pos.mzXML', 'example_peaks_pos.csv', [5,6], 'net64')
 
 Required inputs:
 1) input .mzXML file
@@ -26,9 +26,9 @@ https://pubs.acs.org/doi/suppl/10.1021/acs.analchem.1c01309/suppl_file/ac1c01309
 <br /> b) change the architecture of the CNN models by adding/removing layers 
 <br /> c) change the splits of training & validation sets
 <br /> d) change the training options
-3) save the CNNmodel "net" from workspace 
+3) save the CNNmodel 'net' from workspace 
     
-    save('mymodel.mat','net')
+    save('mymodel.mat', 'net')
 
 ## Citation 
 Anal. Chem. 2021, 93, 36, 12181–12186 "EVA: Evaluation of Metabolic Feature Fidelity Using a Deep Learning Model Trained With Over 25000 Extracted Ion Chromatograms"
