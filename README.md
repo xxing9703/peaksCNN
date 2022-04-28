@@ -20,12 +20,12 @@ Output:
 ## Train your own model. (use script "peaksCNN.m" )
 1) download the training set from link below
 https://pubs.acs.org/doi/suppl/10.1021/acs.analchem.1c01309/suppl_file/ac1c01309_si_001.zip
-2) Do some modifications (optional, see below) and run peaksCNN.m.
-<br /> a) modify the training data set as desired, or add new images to the training data set, which could come from the classification results from your own data
-<br /> b) change the architecture of the CNN models by adding/removing layers 
+2) Customize your model settings (optional, see below) and run peaksCNN.m.
+<br /> a) Adjust the training data: manually examine the plots in true and false folders, make some rearrangement based on your judgement. You can also add some new images to the training data set, which could be obtained from the classification results of your own data.
+<br /> b) change the architecture of the CNN models by adding/modifying/removing layers. (https://www.mathworks.com/help/deeplearning/ug/layers-of-a-convolutional-neural-network.html) 
 <br /> c) change the splits of training & validation sets
 <br /> d) change the training options
-3) save the CNNmodel 'net' from workspace 
+3) After the run is completed, save the CNNmodel 'net' from workspace or type the code below. 
     
     save('mymodel.mat', 'net')
 
