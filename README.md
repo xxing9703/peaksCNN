@@ -17,6 +17,8 @@ Output:
  2) images for EICs of all the peaks will be classified and saved into either "true" or "false" folders.  the output "img" stores an array of EIC images.
  3) A copy of the peaklist file will be created under the same folder, a new column "ispeak" (0 or 1) will be added to the peaklist.
 
+Note: DO NOT close the popup figure (for updating EIC plots) until the run is completed.
+
 ## Train your own model. (use script "peaksCNN.m" )
 1) download the training set from link below
 https://pubs.acs.org/doi/suppl/10.1021/acs.analchem.1c01309/suppl_file/ac1c01309_si_001.zip
