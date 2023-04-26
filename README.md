@@ -31,7 +31,8 @@ https://pubs.acs.org/doi/suppl/10.1021/acs.analchem.1c01309/suppl_file/ac1c01309
     
     save('mymodel.mat', 'net')
 ## Dependancy
- -- Deep learning toolbox
- -- signal processing toolbox
+Deep learning toolbox
+ 
+signal processing toolbox
 ## Citation 
 Anal. Chem. 2021, 93, 36, 12181–12186 "EVA: Evaluation of Metabolic Feature Fidelity Using a Deep Learning Model Trained With Over 25000 Extracted Ion Chromatograms"
